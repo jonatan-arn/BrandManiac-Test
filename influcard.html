@@ -13,6 +13,7 @@
     ></script>
     <script type="module" src="influcard.js"></script>
     <script type="module" src="utils/pieheader.js"></script>
+    <script type="module" src="utils/yearchart.js"></script>
 
     <link rel="stylesheet" href="influcard.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,6 +28,10 @@
     <script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
   </head>
   <header>
     <div class="header_container">
@@ -72,5 +77,82 @@
       </div>
     </div>
   </header>
-  <body></body>
+  <body>
+    <div class="body_container">
+      <div class="column">
+        <div class="column_title card">
+          <i class="fas fa-users column_icon"></i>
+          <h4>Audencia</h4>
+        </div>
+        <div class="column_audience card">
+          <div class="audince_number">
+            <span>Audencia</span>
+            <span> <i class="fas fa-users audience_icon"></i> </span>
+            <span id="audience"></span>
+          </div>
+          <div class="audince_number">
+            <span> Seguidores Fake</span>
+            <span> <i class="fas fa-users audience_icon"></i> </span>
+            <span id="audience_fake"></span>
+          </div>
+          <div class="audince_number">
+            <span>Audencia Real </span>
+            <span> <i class="fas fa-users audience_icon"></i> </span>
+            <span id="audience_real"></span>
+          </div>
+        </div>
+        <div class="column_age card">
+          <div class="column_year_title">Distribución por edad</div>
+          <div class="column_year">
+            <span class="text_year">13-17</span>
+            <div id="year13" class="year"></div>
+            <div id="year13number" class="year_number"></div>
+          </div>
+
+          <div class="column_year">
+            <span class="text_year">18-24</span>
+            <div id="year18" class="year"></div>
+            <div id="year18number" class="year_number"></div>
+          </div>
+
+          <div class="column_year">
+            <span class="text_year">25-34</span>
+            <div id="year25" class="year"></div>
+            <div id="year25number" class="year_number"></div>
+          </div>
+
+          <div class="column_year">
+            <span class="text_year">35-44</span>
+            <div id="year35" class="year"></div>
+            <div id="year35number" class="year_number"></div>
+          </div>
+
+          <div class="column_year">
+            <span class="text_year">45-64</span>
+            <div id="year45" class="year"></div>
+            <div id="year45number" class="year_number"></div>
+          </div>
+
+          <div class="column_year">
+            <span class="text_year">65+</span>
+            <div id="year65" class="year"></div>
+            <div id="year65number" class="year_number"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="column_title card">
+          <i class="fas fa-camera-retro column_icon"></i>
+          <h4>Publicaciones</h4>
+        </div>
+      </div>
+      <div class="column">
+        <div class="column_title card">
+          <i class="fas fa-chart-line column_icon"></i>
+          <h4>Desempeño</h4>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

@@ -1,5 +1,5 @@
 import { loadPieHeader } from "./utils/pieheader.js";
-
+import { loadYear } from "./utils/yearchart.js";
 window.onload = () => {
   loadData();
 };
@@ -9,6 +9,9 @@ const loadData = async () => {
   const influcard = data.influcard;
 
   loadHeaderData(influcard);
+  loadAudience(influcard);
+  loadYear(influcard);
+
   console.log(influcard);
 };
 
@@ -44,4 +47,15 @@ const loadHeaderData = (influcard) => {
   const gender = influcard.gender == 0 ? "Hombre" : "Mujer";
   const personal_data = document.getElementById("personal_data");
   personal_data.textContent = `${influcard.country} - ${gender}, ${influcard.age} Años`;
+};
+
+const loadAudience = (influcard) => {
+  const audience = document.getElementById("audience");
+  const audience_fake = document.getElementById("audience_fake");
+  const audience_real = document.getElementById("audience_real");
+
+  audience.textContent = influcard.followers_formated;
+
+  audience_fake.textContent = `${influcard.fake_followers_formated}%`;
+  audience_real.textContent = influcard.real_followers_formated;
 };
