@@ -1,0 +1,83 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+.header_container {
+  display: grid;
+  margin-top: 20px;
+
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  color: #555555;
+}
+.header_personal {
+  display: flex;
+  padding-left: 40px;
+  gap: 10px;
+}
+#profile_img {
+  max-width: 100px;
+  object-fit: cover;
+  border-radius: 50px;
+  height: 100%;
+  border-bottom-right-radius: 15px;
+}
+
+.personal_container {
+  display: flex;
+  flex-direction: column;
+  margin-top: -15px;
+}
+
+#personal_data {
+  margin-top: 20px;
+}
+.header_stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  padding: 0 120px;
+}
+.header_buttons {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50%;
+
+  gap: 5px;
+}
+
+#date_info {
+  font-size: small;
+}
+.text-icon {
+  padding-left: 5px;
+}
+a {
+  color: #75c3ef;
+  text-decoration: none;
+}
+#reachdiv,
+#relevancediv,
+#resonancediv {
+  width: 100%;
+  height: 50px;
+}
+.stat {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+.stat_reach {
+  color: #2e63b7;
+}
+.stat_relevance {
+  color: #ffd332;
+}
+.stat_resonance {
+  color: #32ffd3;
+}
+.url_icon {
+  color: black;
+}

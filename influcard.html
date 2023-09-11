@@ -5,34 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BrandManiac</title>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+      integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="influcard.js"></script>
+    <script type="module" src="utils/pieheader.js"></script>
+
+    <link rel="stylesheet" href="influcard.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap"
+      rel="stylesheet"
+    />
 
     <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/locales/de_DE.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/geodata/germanyLow.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/fonts/notosans-sc.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
   </head>
   <header>
     <div class="header_container">
       <div class="header_personal">
         <div class="img_container">
-          <img
-            src="https://images.brandmanic.com/api/v1/getimage?account=Tng4dk85Y3BNR2UzeW83cm9kV3VTdz09IyMQlPROSQGYHsFytYXwhGJA&type=1&channel=4"
-            alt=""
-            class="profile_img"
-          />
+          <img src="" alt="account profile image" id="profile_img" />
         </div>
-        <div>
-          <span> Name </span>
+        <div class="personal_container">
+          <h3 id="headername"></h3>
           <span>
-            <a href="">Name link</a>
+            <a id="headernameurl" href=""></a>
           </span>
-          <span>ES - Genere, year</span>
+          <span id="personal_data"></span>
         </div>
       </div>
-      <div class="header_stats"></div>
-      <div class="header_buttons"></div>
+      <div class="header_stats">
+        <div class="stat">
+          <h5 class="stat_reach">Reach</h5>
+          <div id="reachdiv"></div>
+        </div>
+        <div class="stat">
+          <h5 class="stat_relevance">Relevance</h5>
+          <div id="relevancediv"></div>
+        </div>
+        <div class="stat">
+          <h5 class="stat_resonance">Resonance</h5>
+          <div id="resonancediv"></div>
+        </div>
+      </div>
+      <div class="header_buttons">
+        <div>
+          <i class="fas fa-sign-out-alt"></i>
+          <span class="text-icon">salir</span>
+        </div>
+        <div>
+          <i class="fas fa-download"></i>
+          <span class="text-icon">descargar influcard</span>
+        </div>
+        <div>
+          <i class="fas fa-eye"></i><span class="text-icon">ver perfil</span>
+        </div>
+        <div id="date_info">datos actualizados a</div>
+      </div>
     </div>
   </header>
   <body></body>
