@@ -70,4 +70,34 @@ const loadAudience = (influcard) => {
 const loadPublications = (influcard) => {
   loadTerritorie(influcard);
   loadDay(influcard);
+
+  let brands = influcard.brands_selected_arrray.splice(0, 6);
+
+  for (let k in brands) {
+    brands[k] = { ...influcard.brands[brands[k]] };
+  }
+  for (let img of influcard.brands_images) {
+    let contains = brands.filter((f) => f.name == img.name);
+
+    if (contains.length > 0) {
+      let i = brands.findIndex((f) => f.name == img.name);
+      brands[i].image = img.image;
+    }
+  }
+  for (let b of brands) {
+    let marcas = document.getElementById("marcas");
+
+    let container = document.createElement("div");
+    let text = document.createElement("span");
+    let img = document.createElement("img");
+
+    text.textContent = b.name;
+    img.setAttribute("src", b.image);
+    container.classList.add("brand_container");
+    text.classList.add("text_brand");
+    img.classList.add("img_brand");
+    marcas.appendChild(container);
+    container.appendChild(img);
+    container.appendChild(text);
+  }
 };
