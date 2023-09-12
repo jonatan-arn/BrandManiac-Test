@@ -1,6 +1,9 @@
 body {
   font-family: "Roboto", sans-serif;
   color: #6b7d86;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 .header_container {
   display: grid;
@@ -40,13 +43,20 @@ body {
     grid-template-columns: repeat(1, 1fr);
   }
   .body_container {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .header_buttons {
-    margin: 0;
-    flex-direction: row;
+    display: flex !important;
+
+    flex-direction: column;
+
+    width: 100%;
+    margin: 0 15px;
+    align-items: center;
   }
 }
+.header_buttons {
+  margin: 0;
+  flex-direction: row;
+}
+
 .header_personal {
   display: flex;
   padding-left: 40px;
