@@ -188,7 +188,16 @@ a {
 .column_age {
   padding-bottom: 40px;
 }
-.column_year_title {
+.column_subtitle {
   text-align: center;
   padding: 10px 0;
+}
+.audience_multi_column {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+}
+#genderpie {
+  width: 100%;
+  height: 200px;
 }

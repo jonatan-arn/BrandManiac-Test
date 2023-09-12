@@ -14,6 +14,7 @@
     <script type="module" src="influcard.js"></script>
     <script type="module" src="utils/pieheader.js"></script>
     <script type="module" src="utils/yearchart.js"></script>
+    <script type="module" src="utils/genderpie.js"></script>
 
     <link rel="stylesheet" href="influcard.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -102,7 +103,7 @@
           </div>
         </div>
         <div class="column_age card">
-          <div class="column_year_title">Distribución por edad</div>
+          <div class="column_subtitle">Distribución por edad</div>
           <div class="column_year">
             <span class="text_year">13-17</span>
             <div id="year13" class="year"></div>
@@ -137,6 +138,15 @@
             <span class="text_year">65+</span>
             <div id="year65" class="year"></div>
             <div id="year65number" class="year_number"></div>
+          </div>
+        </div>
+        <div class="audience_multi_column">
+          <div class="column_gender card">
+            <div class="column_subtitle">Distribución por género</div>
+            <div id="genderpie"></div>
+          </div>
+          <div class="column_gender card">
+            <div class="column_subtitle">Distribución por país</div>
           </div>
         </div>
       </div>
