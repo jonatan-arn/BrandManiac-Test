@@ -260,21 +260,22 @@ a {
   margin-left: 20px;
   margin-bottom: 10px;
 }
+.icons {
+  width: 1em !important;
+  height: 1em !important;
+  padding: 10px !important;
+  border-radius: 50px;
+  color: white;
+}
 .performance_icon {
   background: black;
   border-radius: 50px;
   color: white;
-  width: 1.5em !important;
-  height: 1.5em !important;
-  padding: 5px !important;
 }
 .reach_icon {
   background: #142860;
   border-radius: 50px;
   color: white;
-  width: 1.5em !important;
-  height: 1.5em !important;
-  padding: 5px !important;
 }
 .performance_number {
   display: flex;
@@ -283,10 +284,33 @@ a {
   margin-left: 20px;
   margin-bottom: 10px;
 }
-#perfomance_reach,
-#perfomance {
+.end_element {
   justify-content: end;
   display: flex;
   width: 100%;
   margin-right: 15px;
+}
+.divide_container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  text-align: center;
+  margin: 15px 50px;
+}
+.content_text {
+  font-size: small;
+}
+.finger_icon {
+  background: #3956a7;
+}
+.view_icon {
+  background: #4a6fd3;
+}
+.engagement_icon {
+  background: #5baefc;
+}
+#wekkchart {
+  width: 100%;
+  height: 180px;
 }

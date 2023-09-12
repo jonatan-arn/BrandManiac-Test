@@ -18,6 +18,7 @@
     <script type="module" src="utils/countrychart.js"></script>
     <script type="module" src="utils/territoriechart.js"></script>
     <script type="module" src="utils/daychart.js"></script>
+    <script type="module" src="utils/videoratechart.js"></script>
 
     <link rel="stylesheet" href="influcard.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -182,15 +183,81 @@
         </div>
         <div class="column_perfomance card">
           <div class="performance_udience">
-            <span> <i class="fas fa-users performance_icon"></i> </span>
+            <span> <i class="fas fa-users performance_icon icons"></i> </span>
             <span>Audencia</span>
-            <span id="perfomance"></span>
+            <span id="perfomance" class="end_element"></span>
           </div>
           <div class="performance_number">
-            <span> <i class="fas fa-users reach_icon"></i> </span>
+            <span> <i class="fas fa-users reach_icon icons"></i> </span>
             <span>Alcance</span>
-            <span id="perfomance_reach"></span>
+            <span id="perfomance_reach" class="end_element"></span>
           </div>
+        </div>
+        <div class="column_perfomance card">
+          <div class="performance_udience">
+            <span>
+              <i class="fas fa-fingerprint finger_icon icons"></i>
+            </span>
+            <span>Impresiones</span>
+            <span id="impressions" class="end_element"></span>
+          </div>
+          <div class="divide_container">
+            <div class="content1">
+              <div id="reach_percent"></div>
+              <span class="content_text"> Alcance </span>
+            </div>
+            <div>|</div>
+            <div class="conten2">
+              <div id="audience_percent"></div>
+              <span class="content_text"> Audiencia </span>
+            </div>
+          </div>
+        </div>
+        <div class="column_perfomance card">
+          <div class="performance_udience">
+            <span>
+              <i class="fas fa-play view_icon icons"></i>
+            </span>
+            <span>Reproducciones</span>
+            <span id="views" class="end_element"></span>
+          </div>
+          <div class="divide_container">
+            <div class="content1">
+              <div id="view_reach"></div>
+              <span class="content_text"> Alcance </span>
+            </div>
+            <div>|</div>
+            <div class="conten2">
+              <div id="view_audience"></div>
+              <span class="content_text"> Audiencia </span>
+            </div>
+          </div>
+        </div>
+        <div class="column_perfomance card">
+          <div class="performance_udience">
+            <span>
+              <i class="fas fa-heart engagement_icon icons"></i>
+            </span>
+            <span>Engagement</span>
+            <span id="engagement" class="end_element"></span>
+          </div>
+          <div class="divide_container">
+            <div class="content1">
+              <div id="engagement_reach"></div>
+              <span class="content_text"> Alcance </span>
+            </div>
+            <div>|</div>
+            <div class="conten2">
+              <div id="engagement_audience"></div>
+              <span class="content_text"> Audiencia </span>
+            </div>
+          </div>
+        </div>
+        <div class="column_territorie card">
+          <div class="column_subtitle">
+            Ratio de Reproducciones según el día de publicación
+          </div>
+          <div id="wekkchart"></div>
         </div>
       </div>
     </div>

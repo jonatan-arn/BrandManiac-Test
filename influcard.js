@@ -4,6 +4,8 @@ import { loadGenderPie } from "./utils/genderpie.js";
 import { loadCountry } from "./utils/countrychart.js";
 import { loadTerritorie } from "./utils/territoriechart.js";
 import { loadDay } from "./utils/daychart.js";
+import { loadVideoChart } from "./utils/videoratechart.js";
+
 window.onload = () => {
   loadData();
 };
@@ -110,4 +112,30 @@ const loadPerformance = (influcard) => {
   perfomance.textContent = influcard.followers_formated;
 
   perfomance_reach.textContent = influcard.reach_formated;
+
+  let impressions = document.getElementById("impressions");
+  let reach_percent = document.getElementById("reach_percent");
+  let audience_percent = document.getElementById("audience_percent");
+  impressions.textContent = `${influcard.avg_impressions_formated}`;
+
+  reach_percent.textContent = `${influcard.reach}%`;
+
+  audience_percent.textContent = `${influcard.resonance}%`;
+
+  let views = document.getElementById("views");
+  let view_reach = document.getElementById("view_reach");
+  let view_audience = document.getElementById("view_audience");
+  views.textContent = `${influcard.vplays_formated}`;
+
+  view_reach.textContent = `${influcard.vr_alcance}%`;
+  view_audience.textContent = `${influcard.vr_audiencia}%`;
+
+  let engagement = document.getElementById("engagement");
+  let engagement_reach = document.getElementById("engagement_reach");
+  let engagement_audience = document.getElementById("engagement_audience");
+  engagement.textContent = `${influcard.engagement_formated}`;
+
+  engagement_reach.textContent = `${influcard.er_alcance}%`;
+  engagement_audience.textContent = `${influcard.er_audiencia}%`;
+  loadVideoChart(influcard);
 };
