@@ -15,6 +15,7 @@ const loadData = async () => {
   loadHeaderData(influcard);
   loadAudience(influcard);
   loadPublications(influcard);
+  loadPerformance(influcard);
   console.log(influcard);
 };
 
@@ -100,4 +101,13 @@ const loadPublications = (influcard) => {
     container.appendChild(img);
     container.appendChild(text);
   }
+};
+
+const loadPerformance = (influcard) => {
+  let perfomance = document.getElementById("perfomance");
+  let perfomance_reach = document.getElementById("perfomance_reach");
+
+  perfomance.textContent = influcard.followers_formated;
+
+  perfomance_reach.textContent = influcard.reach_formated;
 };

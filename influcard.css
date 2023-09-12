@@ -137,6 +137,7 @@ a {
   border-radius: 5px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border: 1px solid #e0dede;
+  margin-right: 5px;
 }
 .column_title {
   height: 70px;
@@ -243,4 +244,49 @@ a {
 }
 .text_brand {
   font-size: small;
+}
+.performance_udience {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+.performance_reach {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+.performance_icon {
+  background: black;
+  border-radius: 50px;
+  color: white;
+  width: 1.5em !important;
+  height: 1.5em !important;
+  padding: 5px !important;
+}
+.reach_icon {
+  background: #142860;
+  border-radius: 50px;
+  color: white;
+  width: 1.5em !important;
+  height: 1.5em !important;
+  padding: 5px !important;
+}
+.performance_number {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+#perfomance_reach,
+#perfomance {
+  justify-content: end;
+  display: flex;
+  width: 100%;
+  margin-right: 15px;
 }
