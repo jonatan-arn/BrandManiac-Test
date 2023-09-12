@@ -2,6 +2,7 @@ import { loadPieHeader } from "./utils/pieheader.js";
 import { loadYear } from "./utils/yearchart.js";
 import { loadGenderPie } from "./utils/genderpie.js";
 import { loadCountry } from "./utils/countrychart.js";
+import { loadTerritorie } from "./utils/territoriechart.js";
 window.onload = () => {
   loadData();
 };
@@ -12,6 +13,7 @@ const loadData = async () => {
 
   loadHeaderData(influcard);
   loadAudience(influcard);
+  loadPublications(influcard);
   console.log(influcard);
 };
 
@@ -63,4 +65,7 @@ const loadAudience = (influcard) => {
 
   loadGenderPie(influcard);
   loadCountry(influcard);
+};
+const loadPublications = (influcard) => {
+  loadTerritorie(influcard);
 };
