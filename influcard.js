@@ -1,6 +1,7 @@
 import { loadPieHeader } from "./utils/pieheader.js";
 import { loadYear } from "./utils/yearchart.js";
 import { loadGenderPie } from "./utils/genderpie.js";
+import { loadCountry } from "./utils/countrychart.js";
 window.onload = () => {
   loadData();
 };
@@ -11,10 +12,6 @@ const loadData = async () => {
 
   loadHeaderData(influcard);
   loadAudience(influcard);
-  loadYear(influcard);
-
-  loadGenderPie(influcard);
-
   console.log(influcard);
 };
 
@@ -53,12 +50,17 @@ const loadHeaderData = (influcard) => {
 };
 
 const loadAudience = (influcard) => {
-  const audience = document.getElementById("audience");
-  const audience_fake = document.getElementById("audience_fake");
-  const audience_real = document.getElementById("audience_real");
+  let audience = document.getElementById("audience");
+  let audience_fake = document.getElementById("audience_fake");
+  let audience_real = document.getElementById("audience_real");
 
   audience.textContent = influcard.followers_formated;
 
   audience_fake.textContent = `${influcard.fake_followers_formated}%`;
   audience_real.textContent = influcard.real_followers_formated;
+
+  loadYear(influcard);
+
+  loadGenderPie(influcard);
+  loadCountry(influcard);
 };

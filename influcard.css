@@ -184,6 +184,7 @@ a {
 }
 .year_number {
   font-size: small;
+  margin-right: 5px;
 }
 .column_age {
   padding-bottom: 40px;
@@ -196,6 +197,7 @@ a {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
+  gap: 5px;
 }
 #genderpie {
   width: 100%;
