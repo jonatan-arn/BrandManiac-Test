@@ -3,6 +3,7 @@ import { loadYear } from "./utils/yearchart.js";
 import { loadGenderPie } from "./utils/genderpie.js";
 import { loadCountry } from "./utils/countrychart.js";
 import { loadTerritorie } from "./utils/territoriechart.js";
+import { loadDay } from "./utils/daychart.js";
 window.onload = () => {
   loadData();
 };
@@ -68,4 +69,5 @@ const loadAudience = (influcard) => {
 };
 const loadPublications = (influcard) => {
   loadTerritorie(influcard);
+  loadDay(influcard);
 };

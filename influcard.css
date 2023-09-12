@@ -209,7 +209,8 @@ a {
   grid-template-rows: 1fr;
   gap: 5px;
 }
-#genderpie {
+#genderpie,
+#daychart {
   width: 100%;
   height: 200px;
 }
