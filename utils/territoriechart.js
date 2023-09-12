@@ -12,7 +12,6 @@ const loadTerritorie = (influcard) => {
   territories = territories.sort((a, b) => {
     return a.value - b.value;
   });
-  console.log(territories);
 
   territoriechart(territories);
 };
@@ -90,7 +89,7 @@ const territoriechart = (data) => {
   });
   let colors = [];
   data.map((d) => colors.push(am5.color(d.color)));
-  console.log(colors);
+
   chart.get("colors").set("colors", colors);
   // Make each column to be of a different color
   series.columns.template.adapters.add("fill", function (fill, target) {
