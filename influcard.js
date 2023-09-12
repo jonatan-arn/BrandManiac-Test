@@ -19,12 +19,24 @@ const loadData = async () => {
   loadPublications(influcard);
   loadPerformance(influcard);
   console.log(influcard);
+
+  setTimeout(function () {
+    swal.close();
+  }, 3000);
 };
 
 async function fetchData() {
+  Swal.fire({
+    allowEscapeKey: false,
+    allowOutsideClick: false,
+    didOpen: () => {
+      Swal.showLoading();
+    },
+  });
   try {
     let response = await fetch("./data.json");
     let data = await response.json();
+
     return data;
   } catch (error) {
     console.error(error);
