@@ -34,7 +34,8 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
   .header_buttons {
-    flex-direction: row;
+    flex-direction: row !important;
+    flex-direction: column;
     margin: 0;
   }
 }
@@ -54,7 +55,6 @@ body {
 }
 .header_buttons {
   margin: 0;
-  flex-direction: row;
 }
 
 .header_personal {

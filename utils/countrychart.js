@@ -59,7 +59,7 @@ const countryChart = (number, quantity) => {
       to: quantity,
       name: number,
       columnSettings: {
-        fill: am5.color(0x4287f5),
+        fill: am5.color(0xfc0313),
       },
     },
   ];
